@@ -1,17 +1,23 @@
 
-var msj = document.getElementById("msj"); // variable resultado es el lugar donde mi elemento que se encuentra en mi html donde me mostrara el resultado el valor unicode 
+var mensaje = document.getElementById("mensaje");
 
-var mensaje = prompt('Ingrese su numero de tarjeta:' );
-var respuesta = mensaje;
-if (mensaje.length > 0){
-  alert('ingresa un numero por favor');
-}
-var arr = [];
-var isValidCard = function(arr){
-
-var str = respuesta.split();
-
-
-
+var isValidCard = function(){
+	var numTarj = document.getElementById("entrada").value; //Obtener el valor de lo que ingresa el usuario
  
+  	var arrNum = []; //creamos un array
+  	var arrInver = [];
+ 
+  for ( i = 0; i < numTarj.length; i++){ //recorrido de mi numero de tarjeta ingresado 
+  	arrNum[i] = numTarj.charAt(i);//mostrare en un array los caracteres devueltos de numTarj
+  }
+  
+  for ( n = 0; n < arrNum.length; n++){//recorrido de mi arrNum para inversar el array 
+  	arrInver = arrNum.reverse(n);
+		console.log(arrInver);
+  }
+  
+  
+  
+  //mensaje.innerHTML = arrNum.toString();
+
 };
